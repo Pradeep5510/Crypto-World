@@ -1,0 +1,182 @@
+/* =====================
+   Global Styles
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #111;
+  text-align: center;
+}
+
+/* =====================
+   Header / Brand
+===================== */
+.cryptoworld {
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: bold;
+}
+
+/* =====================
+   Tracker / Search
+===================== */
+.tracker {
+  margin: 10px auto;
+  position: relative;
+  width: fit-content;
+}
+
+input,
+button {
+  padding: 8px 12px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background: gold;
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover {
+  background: orange;
+}
+
+/* =====================
+   Suggestions Dropdown
+===================== */
+#suggestions {
+  list-style: none;
+  margin-top: 4px;
+  padding: 0;
+  background: #e7e5e5;
+  max-height: 180px;
+  overflow-y: auto;
+  width: 220px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  z-index: 2000;
+}
+
+#suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#suggestions li:hover {
+  background: #ddd;
+}
+
+#price {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* =====================
+   Market Table
+===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+th {
+  background: #0d1117;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+canvas {
+  width: 100px !important;
+  height: 40px !important;
+}
+
+/* =====================
+   Second Section (Liquidation + News)
+===================== */
+.secondSection {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.liquidation,
+.crypto-news {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+/* =====================
+   Mobile Responsive
+===================== */
+@media (max-width: 768px) {
+
+  body {
+    text-align: left;
+  }
+
+  .tracker {
+    width: 100%;
+    text-align: center;
+  }
+
+  input {
+    width: 90%;
+  }
+
+  #suggestions {
+    width: 90%;
+  }
+
+  /* Stack sections vertically */
+  .secondSection {
+    flex-direction: column;
+  }
+
+  /* Make table scrollable */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: 13px;
+  }
+}

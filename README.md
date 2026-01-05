@@ -6,8 +6,7 @@ A real-time cryptocurrency dashboard built with Bootstrap and JavaScript, featur
 
 - Live price and market data fetched from public crypto APIs  
 - Dynamic charts (line, bar, candlestick) visualizing price trends  
-- Responsive UI using Bootstrap  
-- Dark mode / light mode (if implemented)  
+- Responsive UI using Bootstrap   
 - Error handling and loading states  
 
 ## Tech Stack
