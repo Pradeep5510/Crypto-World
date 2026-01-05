@@ -11,12 +11,36 @@ A real-time cryptocurrency dashboard built with Bootstrap and JavaScript, featur
 
 ## Tech Stack
 
-- HTML, CSS, Bootstrap  
-- JavaScript (vanilla or libraries)  
-- Crypto API (e.g. CoinGecko, CoinCap)   
-- Version control with Git & GitHub  
+HTML5, CSS3
 
+Bootstrap 5 (responsive layout & components)
+
+Vanilla JavaScript
+
+Public Crypto APIs
+
+CoinGecko (prices, trending assets)
+
+Binance Futures WebSocket (live liquidations)
+
+Git & GitHub for version control
 ## Installation / Usage
+
+Crypto-World/
+├── index.html
+├── trending.html
+├── exchanges.html
+├── style/
+│   ├── style.css
+│   ├── trending.css
+│   └── exchanges.css
+├── js_file/
+│   ├── main.js
+│   ├── trending.js
+│   ├── liquidation.js
+│   └── exchanges.js
+└── README.md
+
 
 ```bash
 # Clone this repo
