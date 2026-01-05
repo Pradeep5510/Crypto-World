@@ -15,10 +15,17 @@ ws.onopen = () => {
 ws.onmessage = (event) => {
   const payload = JSON.parse(event.data);
 
-  payload.forEach(({ o }) => {
+  const events = Array.isArray(payload) ? payload : [payload];
+
+  events.forEach(({ o }) => {
+    if (!o) return;
+
     const price = Number(o.p);
     const qty = Number(o.q);
     const usd = price * qty;
+
+    // ignore very small liquidations
+    if (usd < 100000) return;
 
     liquidations.unshift({
       symbol: o.s.replace("USDT", ""),
@@ -35,6 +42,8 @@ ws.onmessage = (event) => {
 
   render();
 };
+console.log("Liquidation payload:", payload);
+
 
 ws.onerror = (e) => {
   console.error("❌ WebSocket error", e);
